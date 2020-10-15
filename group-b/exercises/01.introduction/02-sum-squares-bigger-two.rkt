@@ -5,9 +5,13 @@
 ;1.3 - Съчинете процедура, която по дадени три числа, намира сумата от квадратите на по-големите две от тях.
 ; За по-удобно, може да разбиете задачата на по-малки такива.
 
+(define (square n) (* n n))
+
 (define (squares-sum-bigger-two a b c)
-  (void)
-)
+  (if (or (> a b) (> a c))
+      (+ (square a) (if (> b c) (square b) (square c)))
+      (+ (square b) (square c))
+  ))
 
 (define tests
   (test-suite

@@ -5,7 +5,16 @@
 ; Трябва да работи и за отрицателни числа.
 
 (define (count-digits number)
-  (void)
+  (define (helper number counter)
+    (if (< number 0)
+        (helper (* -1 number) counter)
+        (if (> (floor (/ number 10)) 0)
+            (helper (floor (/ number 10)) (+ 1 counter))
+             counter
+        )
+      )
+    )
+  (helper number 1)
 )
 
 (define tests

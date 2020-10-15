@@ -4,8 +4,10 @@
 ; 1.4 - Съчинете процедура, която намира сумата на числата в даден затворен интервал.
 
 (define (sum-interval start end)
-  (void)
-)
+  (if (<= start end)
+      (+ start (sum-interval (+ start 1) end))
+      0
+))
 
 (define tests
   (test-suite
