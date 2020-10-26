@@ -6,7 +6,10 @@
 ; Да стане по итеративен начин.
 
 (define (accumulate operation null-value start end term next)
-  (void)
+  (if (< end start)
+      null-value
+      (accumulate operation (operation null-value (term start)) (next start) end term next)
+  )
 )
 
 (define (id x) x)

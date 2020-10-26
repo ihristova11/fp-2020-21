@@ -18,8 +18,7 @@
       (compose f (repeated f (- n 1)))))
 
 (define (repeat f n)
-  (void)
-  ;(accumulate ??? ??? ??? ??? ??? ???)
+  (accumulate compose f 1 (- n 1) (lambda (x) f) (lambda (x) (+ 1 x)))
 )
 
 (define tests

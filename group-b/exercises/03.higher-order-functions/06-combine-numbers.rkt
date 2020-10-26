@@ -6,8 +6,28 @@
 ; Ако f1,f2,f3,...,fk и s1,s2,s3,...,sl са цифрите на съответните числа, а g е нашата бинарна функция, търсим резултатът от g(f1,s1) + g(f2,s2) + g(f3,s3) + ...
 ; Функцията да терминира при достигане края на едно от числата.
 
+(define (reverse-number x)
+  (define (loop i res)
+    (if (< 0 i)
+        (loop (quotient i 10) (+ (* res 10) (remainder i 10)))
+        res
+        ))
+  (loop x 0)
+)
+
 (define (combine-numbers first second g)
-  (void)
+  (define (accumulate first second cond term next res g op)
+    (if (cond first second) ; x > 0 && y > 0
+        (accumulate (next first) (next second) cond term next (op res (g (term first) (term second))) g op)
+        res
+    )
+  )
+
+  (accumulate (reverse-number first) (reverse-number second)
+              (lambda (x y) (and (> x 0) (> y 0)))
+              (lambda (x) (remainder x 10))
+              (lambda (x) (quotient x 10)) 
+              0 g +)
 )
 
 ; Бонус занимавка: Да параметризираме и операцията, с която комбинираме резултатите от g(fk,sl).
