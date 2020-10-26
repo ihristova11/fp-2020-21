@@ -6,8 +6,19 @@
 ; Да стане по итеративен начин.
 
 (define (sum start end term next)
-  (void)
+;  (if (> start end)
+;      0
+;      (+ (term start) (sum (next start) end term next))
+;  )
+  (define (sum-iter start result)
+    (if (> start end)
+        result
+        (sum-iter (next start) (+ result (term start)))
+    )
+  )
+  (sum-iter start 0)
 )
+
 
 (define (id x) x)
 (define (inc x) (+ x 1))
