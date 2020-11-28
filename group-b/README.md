@@ -32,6 +32,31 @@ bvushkov@gmail.com, като е хубаво да се представите.
 * [Задачки](./exercises/02.recursive-iterative-processes)
 
 ## Седмица 3 - Функции от по-висок ред
-* Запис
+* [Запис](https://drive.google.com/file/d/1mmk2qRVnGdulMf9s3Zeig_BjRWNslzJg/view?usp=sharing)
 * [Записки](./class/03.higher-order-functions.md)
 * [Задачки](./exercises/03.higher-order-functions)
+
+## Седмица 4 - Списъци
+* [Запис](https://drive.google.com/file/d/1af5EdnTFKu5bqnvtuRI9kVkzZaF4X6Wu/view?usp=sharing)
+* [Записки](./class/04.lists.md)
+* [Задачки](./exercises/04.lists)
+
+## Седмица 5 - Още списъци
+* [Запис](https://drive.google.com/file/d/1yU5LHzbCIXXVG8SGSD3jLocceVAmNRZ8/view?usp=sharing)
+* [Записки](./class/05.more-lists.md)
+* [Задачки](./exercises/05.more-lists)
+
+## Седмица 6 -  map/filter/fold
+* [Запис](https://drive.google.com/file/d/1Ppw6ZVWjRbLev4_UdZcVLAmOBaTWlH-5/view?usp=sharing)
+* [Записки](./class/06.map-filter-fold.md)
+* [Задачки](./exercises/06.map-filter-fold)
+
+## Седмица 7 - Дървета
+* [Запис](https://drive.google.com/file/d/1g6ks7YprIN5NKHJS1HMy5U4TxNUKn4zw/view?usp=sharing)
+* [Записки](./class/07.trees.rkt)
+* [Задачки](./class/07.trees.rkt)
+
+## Седмица 8 - Потоци
+* Запис
+* [Записки](./class/08.streams.rkt)
+* [Задачки](./class/08.streams.rkt)
