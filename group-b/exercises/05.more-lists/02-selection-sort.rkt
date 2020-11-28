@@ -21,13 +21,15 @@
 (define (selection-sort xs)
   (if (null? xs)
       '()
-      (else
-        (let ((min-element (find-min xs)))
-             (cons min-element (selection-sort (remove-first min-element xs)))))))
+       (let ((min-element (find-min xs)))
+             (cons min-element (selection-sort (remove-first min-element xs))))))
 
 (define tests
   (test-suite "Selection sort"
-    ; Искаме да тестваме тази функция
+    (check-true (= (length (selection-sort '(2 6 1 2 9 7))) (length '(2 6 1 2 9 7))))
+    (check-equal? (selection-sort '(2 6 1 2 9 7)) '(1 2 2 6 7 9))
+    (check-equal? (selection-sort '(2)) '(2))
+    (check-equal? (selection-sort '(1 2 2 6 7 9)) '(1 2 2 6 7 9))
   )
 )
 
