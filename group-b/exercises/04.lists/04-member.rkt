@@ -5,7 +5,9 @@
 ; Искаме да проверим дали х се съдържа в lst
 
 (define (member? x lst)
-  (void)
+  (cond ((null? lst) #f)
+    ((equal? (car lst) x) #t)
+    (else (member? x (cdr lst))))
 )
 
 (define tests
