@@ -5,7 +5,10 @@
 ; Търсим функция, която връща списък от всички без първите n елемента на даден такъв.
 
 (define (drop n xs)
-  (void)
+  (cond ((= 0 n) xs)
+        ((>= n (length xs)) '())
+        (else (drop (- n 1) (cdr xs)))
+  )
 )
 
 (define tests
