@@ -5,8 +5,11 @@
 ; Търсим функция, която конкатенира два списъка
 
 (define (append xs ys)
-  (void)
+  (if (null? xs)
+      ys
+      (cons (car xs) (append (cdr xs) ys)))
 )
+
 
 (define tests
   (test-suite "append tests"
