@@ -2,24 +2,19 @@
 (require rackunit)
 (require rackunit/text-ui)
 
-(define (duplicate? x lst)
-  (define (helper x lst count)
+(define (contains? x lst)
     (cond ((null? lst) #f)
-      ((> count 1) #t)
-      ((= (car lst) x) (helper x (cdr lst) (+ 1 count)))
-      (else (helper x (cdr lst) count))
+      ((= (car lst) x) #t)
+      (else (contains? x (cdr lst)))
     )
   )
-
-  (helper x lst 0) 
-)
 
 ; remove-duplicates 
 ; премахва всички повтарящи се елементи от списъка
 (define (remove-duplicates xs)
   (define (helper xs res)
   (cond ((null? xs) res)
-        ((not (duplicate? (car xs) res)) (helper (cdr xs) (cons (car xs) res)))
+        ((not (contains? (car xs) res)) (helper (cdr xs) (append res (list (car xs)))))
         (else (helper (cdr xs) res))
   )
 )
