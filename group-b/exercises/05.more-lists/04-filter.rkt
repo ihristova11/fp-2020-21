@@ -7,7 +7,10 @@
 ; връща списък само с елементите на оригиналния, които изпълняват условието
 
 (define (filter p? ys)
-  (void)
+  (cond ((and (not (null? ys)) (p? (car ys))) (append (list (car ys)) (filter p? (cdr ys))))
+        ((not (null? ys)) (filter p? (cdr ys)))
+         (else '())
+  )
 )
 
 (define tests
