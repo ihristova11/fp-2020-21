@@ -4,12 +4,17 @@
 
 ; Търсим функция, която обръща даден списък
 (define (reverse xs)
-  (void)
+    (if (or (null? xs) (= 1 (length xs))) xs
+        (append (reverse (cdr xs)) (list (car xs)))
+    )
 )
 
 ; И нейн итеративен вариант
 (define (reverse-iter xs)
-  (void)
+  (define (helper xs res)
+    (if (null? xs) res (helper (cdr xs) (cons (car xs) res)))
+  )
+  (helper xs '())
 )
 
 (define tests
