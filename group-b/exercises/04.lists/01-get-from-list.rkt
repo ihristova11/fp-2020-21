@@ -3,26 +3,27 @@
 (require rackunit/text-ui)
 
 ; Нека имаме следния списък
-(define my-list '(1 2 3 (4 5) (6 (7 8))))
+(define lst '(1 2 3 (4 5) (6 (7 8))))
 
 ; Искаме с подходящи извиквания на car и cdr да вземем всяко число.
 ; Първите две са за пример.
 
-(define get-one (void))
+(define get-one (car lst))
 
-(define get-two (void))
+(define get-two (car (cdr lst)))
 
-(define get-three (void))
+(define get-three (car (cdr (cdr lst))))
 
-(define get-four (void))
+(define get-four (car (car (cdr (cdr (cdr lst))))))
 
-(define get-five (void))
+(define get-five (car (cdr (car (cdr (cdr (cdr lst)))))))
 
-(define get-six (void))
+(define get-six (car (car (cdr (cdr (cdr (cdr lst)))))))
 
-(define get-seven (void))
+(define get-seven (car (car (cdr (car (cdr (cdr (cdr (cdr lst)))))))))
 
-(define get-eight (void))
+(define get-eight (car (cdr (car (cdr (car (cdr (cdr (cdr (cdr lst))))))))))
+
 
 (define tests
   (test-suite "dummy tests"
