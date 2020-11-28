@@ -5,7 +5,10 @@
 ; Търсим функция, която връща списък от първите n елемента на даден такъв.
 
 (define (take n xs)
-  (void)
+  (cond ((= 0 n) '())
+        ((>= n (length xs)) xs)
+        (else (cons (car xs) (take (- n 1) (cdr xs))))
+  )
 )
 
 (define tests
