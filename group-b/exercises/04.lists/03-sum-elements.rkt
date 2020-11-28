@@ -5,7 +5,10 @@
 ; Търсим сумата на числата от даден списък
 
 (define (sum-elements xs)
-  (void)
+  (define (helper xs sum)
+    (if (null? xs) sum (helper (cdr xs) (+ (car xs) sum)))
+  )
+  (helper xs 0)
 )
 
 (define tests
