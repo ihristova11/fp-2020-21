@@ -5,7 +5,7 @@
 ; Искаме да вземем i-тия елемент от списъка lst, като броим от 0.
 
 (define (list-ref lst i)
-  (void)
+  (if (= i 0) (car lst) (list-ref (cdr lst) (- i 1)))
 )
 
 (define tests
