@@ -6,7 +6,10 @@
 ; изпълнява някакво условие
 
 (define (any? p? xs)
-  (void)
+  (cond ((null? xs) #f)
+        ((p? (car xs)) #t)
+        (else (any? p? (cdr xs)))
+  )
 )
 
 ; Искаме функция, която ни казва дали всички елементи в списък удовлетворяват
@@ -14,7 +17,7 @@
 ; Дефинирайте я на база на any?
 
 (define (all? p? xs)
-  (void)
+  (and #t (any? p? xs))
 )
 
 
@@ -22,7 +25,7 @@
   (test-suite ""
     (check-true (any? odd? '(2 4 4 2 8 9 2 0)))
     (check-true (any? (lambda (x) (> (length x) 3)) '((1 2 3) (3 4 4 2) (2 1))))
-    (check-false (any? (lambda (x) (> x 2)) (map (lambda (x) (remainder x 3)) (range 1 100))))
+    (check-false (any? (lambda (x) (> x 2)) (map (lambda (x) (remainder x 3)) (range 1 10))))
   )
 )
 
