@@ -64,3 +64,11 @@ bvushkov@gmail.com, като е хубаво да се представите.
 ## Седмица 9 - Графи
 * [Запис](https://drive.google.com/file/d/1l-g6QXJlP2ZidwmnPzF0rS3P0RLT8pra/view?usp=sharing)
 * [Задачки](./class/09.graphs.rkt)
+
+## Седмица 10 - Подготовка за контролно
+* [Запис](https://drive.google.com/file/d/1-kkcIK46DCYP4PGjsKEnEizyhxqdus01/view?usp=sharing)
+* [Задачки](./class/exam-prep.rkt)
+
+
+## Седмица 11 - Въведение в Haskell
+* [Запис](https://drive.google.com/file/d/1yeCtBPBk2_L4htsFNsztGjU_730hrzEw/view?usp=sharing)
